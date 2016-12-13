@@ -1,5 +1,6 @@
 postgresql:
   image: orchardup/postgresql:latest
+  restart: always
   environment:
     - POSTGRESQL_USER=sonar
     - POSTGRESQL_PASS=xaexohquaetiesoo
@@ -12,6 +13,7 @@ sonarqube:
   #image: harbur/sonarqube:latest
   build: ./
   dockerfile: Dockerfile
+  restart: always
   links:
     - postgresql:db
   environment:
