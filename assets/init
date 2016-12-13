@@ -21,7 +21,7 @@ sed -i 's|#sonar.jdbc.url=jdbc:postgresql://localhost/sonar|sonar.jdbc.url=jdbc:
 appStart () {
   echo "Starting sonarqube..."
   set +e
-  exec java -jar lib/sonar-application-$SONAR_VERSION.jar \
+  exec java -jar /opt/sonarqube/lib/sonar-application-$SONAR_VERSION.jar \
        -Dsonar.log.console=true \
        -Djava.security.egd=file:/dev/./urandom
 }
