@@ -5,7 +5,7 @@ COPY assets/init /app/init
 RUN chmod 755 /app/init
 
 VOLUME /opt/sonarqube/extensions
-VOLUME /opt/sonarqube/logs/
+VOLUME /opt/sonarqube/logs
 
 ENTRYPOINT ["/app/init"]
 CMD ["app:start"]
